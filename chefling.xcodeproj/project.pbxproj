@@ -7,21 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20D05F6F7E79D6BFA0C3D225 /* Pods_chefling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5514A707EF6EF82417593C7 /* Pods_chefling.framework */; };
+		3DA483361E83D4FA009C0704 /* MytextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA483351E83D4FA009C0704 /* MytextField.swift */; };
+		3DA4833A1E85033C009C0704 /* ButtonX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA483391E85033C009C0704 /* ButtonX.swift */; };
+		3DA4833C1E8503B7009C0704 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA4833B1E8503B7009C0704 /* UIColor.swift */; };
+		3DA4833E1E8523FD009C0704 /* MyTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA4833D1E8523FD009C0704 /* MyTextView.swift */; };
+		3DA483441E858498009C0704 /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA483431E858498009C0704 /* TimePickerView.swift */; };
+		3DDD1FCB1E8B7D35008C94E1 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDD1FCA1E8B7D35008C94E1 /* File.swift */; };
 		3DFE62951E83D0FD0082A4DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE62941E83D0FD0082A4DE /* AppDelegate.swift */; };
-		3DFE62971E83D0FD0082A4DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE62961E83D0FD0082A4DE /* ViewController.swift */; };
+		3DFE62971E83D0FD0082A4DE /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE62961E83D0FD0082A4DE /* RecipeViewController.swift */; };
 		3DFE629A1E83D0FD0082A4DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DFE62981E83D0FD0082A4DE /* Main.storyboard */; };
 		3DFE629C1E83D0FD0082A4DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DFE629B1E83D0FD0082A4DE /* Assets.xcassets */; };
 		3DFE629F1E83D0FD0082A4DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DFE629D1E83D0FD0082A4DE /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3DA483351E83D4FA009C0704 /* MytextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MytextField.swift; sourceTree = "<group>"; };
+		3DA483391E85033C009C0704 /* ButtonX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonX.swift; sourceTree = "<group>"; };
+		3DA4833B1E8503B7009C0704 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		3DA4833D1E8523FD009C0704 /* MyTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTextView.swift; sourceTree = "<group>"; };
+		3DA483431E858498009C0704 /* TimePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
+		3DDD1FCA1E8B7D35008C94E1 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		3DFE62911E83D0FD0082A4DE /* chefling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chefling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFE62941E83D0FD0082A4DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3DFE62961E83D0FD0082A4DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3DFE62961E83D0FD0082A4DE /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		3DFE62991E83D0FD0082A4DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DFE629B1E83D0FD0082A4DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DFE629E1E83D0FD0082A4DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DFE62A01E83D0FD0082A4DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B553DF5084610BC88226ACF /* Pods-chefling.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chefling.release.xcconfig"; path = "Pods/Target Support Files/Pods-chefling/Pods-chefling.release.xcconfig"; sourceTree = "<group>"; };
+		DF37CCCD77350839D820C9B9 /* Pods-chefling.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chefling.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chefling/Pods-chefling.debug.xcconfig"; sourceTree = "<group>"; };
+		E5514A707EF6EF82417593C7 /* Pods_chefling.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chefling.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +45,66 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20D05F6F7E79D6BFA0C3D225 /* Pods_chefling.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20D550FDA4C8D772D7A80B0A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF37CCCD77350839D820C9B9 /* Pods-chefling.debug.xcconfig */,
+				7B553DF5084610BC88226ACF /* Pods-chefling.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3DA4833F1E8563DE009C0704 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				3DA483351E83D4FA009C0704 /* MytextField.swift */,
+				3DA483391E85033C009C0704 /* ButtonX.swift */,
+				3DA4833B1E8503B7009C0704 /* UIColor.swift */,
+				3DA4833D1E8523FD009C0704 /* MyTextView.swift */,
+				3DA483431E858498009C0704 /* TimePickerView.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		3DA483401E8563F5009C0704 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3DFE62981E83D0FD0082A4DE /* Main.storyboard */,
+				3DFE629D1E83D0FD0082A4DE /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3DA483411E85640E009C0704 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3DFE62961E83D0FD0082A4DE /* RecipeViewController.swift */,
+				3DDD1FCA1E8B7D35008C94E1 /* File.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3DA483421E856423009C0704 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		3DFE62881E83D0FD0082A4DE = {
 			isa = PBXGroup;
 			children = (
 				3DFE62931E83D0FD0082A4DE /* chefling */,
 				3DFE62921E83D0FD0082A4DE /* Products */,
+				20D550FDA4C8D772D7A80B0A /* Pods */,
+				903A02742C7DBC3DD126CCF4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +119,23 @@
 		3DFE62931E83D0FD0082A4DE /* chefling */ = {
 			isa = PBXGroup;
 			children = (
+				3DA483421E856423009C0704 /* Model */,
+				3DA483411E85640E009C0704 /* Controller */,
+				3DA483401E8563F5009C0704 /* View */,
+				3DA4833F1E8563DE009C0704 /* Helper */,
 				3DFE62941E83D0FD0082A4DE /* AppDelegate.swift */,
-				3DFE62961E83D0FD0082A4DE /* ViewController.swift */,
-				3DFE62981E83D0FD0082A4DE /* Main.storyboard */,
 				3DFE629B1E83D0FD0082A4DE /* Assets.xcassets */,
-				3DFE629D1E83D0FD0082A4DE /* LaunchScreen.storyboard */,
 				3DFE62A01E83D0FD0082A4DE /* Info.plist */,
 			);
 			path = chefling;
+			sourceTree = "<group>";
+		};
+		903A02742C7DBC3DD126CCF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5514A707EF6EF82417593C7 /* Pods_chefling.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +145,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DFE62A31E83D0FD0082A4DE /* Build configuration list for PBXNativeTarget "chefling" */;
 			buildPhases = (
+				9B056D6E8D97723274D38771 /* [CP] Check Pods Manifest.lock */,
 				3DFE628D1E83D0FD0082A4DE /* Sources */,
 				3DFE628E1E83D0FD0082A4DE /* Frameworks */,
 				3DFE628F1E83D0FD0082A4DE /* Resources */,
+				8B748F67FEDE0051584842AB /* [CP] Embed Pods Frameworks */,
+				1D32FF9A7BDD84C6231738F0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +173,7 @@
 				TargetAttributes = {
 					3DFE62901E83D0FD0082A4DE = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = QY8PV2R65U;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,13 +209,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D32FF9A7BDD84C6231738F0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-chefling/Pods-chefling-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B748F67FEDE0051584842AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-chefling/Pods-chefling-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B056D6E8D97723274D38771 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3DFE628D1E83D0FD0082A4DE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DFE62971E83D0FD0082A4DE /* ViewController.swift in Sources */,
+				3DA4833A1E85033C009C0704 /* ButtonX.swift in Sources */,
+				3DA4833E1E8523FD009C0704 /* MyTextView.swift in Sources */,
+				3DA483361E83D4FA009C0704 /* MytextField.swift in Sources */,
+				3DA483441E858498009C0704 /* TimePickerView.swift in Sources */,
+				3DFE62971E83D0FD0082A4DE /* RecipeViewController.swift in Sources */,
+				3DDD1FCB1E8B7D35008C94E1 /* File.swift in Sources */,
 				3DFE62951E83D0FD0082A4DE /* AppDelegate.swift in Sources */,
+				3DA4833C1E8503B7009C0704 /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +388,10 @@
 		};
 		3DFE62A41E83D0FD0082A4DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF37CCCD77350839D820C9B9 /* Pods-chefling.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QY8PV2R65U;
 				INFOPLIST_FILE = chefling/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.theiOSDeveloper.chefling;
@@ -268,8 +402,10 @@
 		};
 		3DFE62A51E83D0FD0082A4DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B553DF5084610BC88226ACF /* Pods-chefling.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QY8PV2R65U;
 				INFOPLIST_FILE = chefling/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.theiOSDeveloper.chefling;
@@ -297,6 +433,7 @@
 				3DFE62A51E83D0FD0082A4DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
