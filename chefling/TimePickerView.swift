@@ -21,7 +21,7 @@ class TimePickerView: UIPickerView, UIPickerViewDataSource, UIPickerViewDelegate
     func setup(){
         self.delegate = self
         self.dataSource = self
-        self.backgroundColor = UIColor.darkGray
+//        self.backgroundColor = UIColor.darkGray
          let height = CGFloat(20)
          let offsetX = self.frame.size.width / 3
          let offsetY = self.frame.size.height/2 - height/2
@@ -81,7 +81,7 @@ class TimePickerView: UIPickerView, UIPickerViewDataSource, UIPickerViewDelegate
         }
         let columnView = UILabel(frame: CGRect(x:35, y:0, width:self.frame.size.width/3 - 35, height:30))
         columnView.text = String(format:"%02lu", row)
-        columnView.textAlignment = NSTextAlignment.center
+        columnView.textAlignment = NSTextAlignment.right
         
         return columnView
     }

@@ -27,27 +27,23 @@ class RecipeViewController: UIViewController{
     @IBOutlet weak var recipeType: MytextField!
     @IBOutlet weak var nextView: UIView!
     @IBOutlet weak var setRecipeImage: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     let pickerViewServers = UIPickerView()
     let pickerViewCookingTime = UIDatePicker()
     let pickerRecipeType = UIPickerView()
     let timePickerView = TimePickerView()
-    
     var pickerServes = ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"]
     let muteForPickerData = ["minute(s)","hour(s)"]
     let hours = Array(1...24)
     let minutes = Array(0...59)
-    
     var rType = [JSON]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         pickerViewConfig()
-       servers_Config_picker()
+        servers_Config_picker()
         cooking_Config_picker()
         recipeTypeConfig_picker()
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(sender:)), name:NSNotification.Name.UIKeyboardWillShow, object: nil);
-        NotificationCenter.default.addObserver(self, selector:#selector(self.keyboardWillHide(sender:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil);
-
     }
     func pickerViewConfig(){
         loadRecipeType()
@@ -63,13 +59,12 @@ class RecipeViewController: UIViewController{
         pickerRecipeType.delegate  = self
         recipe_Image.clipsToBounds = true
     }
-    
-    func addingScrollView(){
-        let scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: view.frame.width,height: view.frame.height))
-        scrollView.backgroundColor = UIColor.white
-        scrollView.isScrollEnabled = true
-        self.view.addSubview(scrollView)
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
+    
+    
     func loadRecipeType(){
         let api = "http://www.chefling.me/testapi/getRecipeType.php"
         let param = ["RTid":"0"]
@@ -88,7 +83,7 @@ class RecipeViewController: UIViewController{
             self.pickerRecipeType.reloadAllComponents()
         }
     }
-      @IBAction func setRecipeImageAction(_ sender: Any) {
+    @IBAction func setRecipeImageAction(_ sender: Any) {
         selectPhotos()
     }
     func selectPhotos(){
@@ -102,9 +97,14 @@ class RecipeViewController: UIViewController{
     {
         servers.inputView = pickerViewServers
         let toolBar = UIToolbar()
-        toolBar.barStyle = UIBarStyle.default
-        toolBar.isTranslucent = true
-        toolBar.tintColor = UIColor(hex:"85bb38")
+//        toolBar.barStyle = UIBarStyle.default
+//        toolBar.isTranslucent = true
+//        toolBar.tintColor = UIColor(hex:"85bb38")
+        toolBar.barStyle = UIBarStyle.blackOpaque
+        toolBar.backgroundColor = UIColor(hex:"85bb38")
+        //        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor.white
+        toolBar.sizeToFit()
         toolBar.sizeToFit()
         let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(RecipeViewController.server_done))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
@@ -130,9 +130,14 @@ class RecipeViewController: UIViewController{
     {
         recipeType.inputView = pickerRecipeType
         let toolBar = UIToolbar()
-        toolBar.barStyle = UIBarStyle.default
-        toolBar.isTranslucent = true
-        toolBar.tintColor = UIColor(hex:"85bb38")
+//        toolBar.barStyle = UIBarStyle.default
+//        toolBar.isTranslucent = true
+//        toolBar.tintColor = UIColor(hex:"85bb38")
+        toolBar.barStyle = UIBarStyle.blackOpaque
+        toolBar.backgroundColor = UIColor(hex:"85bb38")
+        //        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor.white
+        toolBar.sizeToFit()
         toolBar.sizeToFit()
         let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(RecipeViewController.recipeType_done))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
@@ -153,14 +158,14 @@ class RecipeViewController: UIViewController{
         recipeType.resignFirstResponder()
         
     }
-    
     func cooking_Config_picker()
     {
         cookingTime.inputView = timePickerView
         let toolBar = UIToolbar()
-        toolBar.barStyle = UIBarStyle.default
-        toolBar.isTranslucent = true
-        toolBar.tintColor = UIColor(hex:"85bb38")
+        toolBar.barStyle = UIBarStyle.blackOpaque
+        toolBar.backgroundColor = UIColor(hex:"85bb38")
+//        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor.white
         toolBar.sizeToFit()
         let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(RecipeViewController.cooking_done))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
@@ -181,14 +186,7 @@ class RecipeViewController: UIViewController{
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
-    
-    func keyboardWillShow(sender: NSNotification) {
-        self.view.frame.origin.y = -150 // Move view 150 points upward
-    }
-    
-    func keyboardWillHide(sender: NSNotification) {
-        self.view.frame.origin.y = 0 // Move view to original position
-    }
+
 }
 extension RecipeViewController:UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextFieldDelegate,UITextViewDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
@@ -214,22 +212,35 @@ extension RecipeViewController:UIImagePickerControllerDelegate,UINavigationContr
         return true
     }
     func textViewDidEndEditing(_ textView: UITextView) {
-        
-        if (textView.text == "") {
-            noteTextView.text = ""
-            textView.textColor = UIColor.lightGray
-        }
+        animateViewMoving(up: false, moveValue: 100)
         textView.resignFirstResponder()
     }
     func textViewDidBeginEditing(_ textView: UITextView){
+        if (textView.text == "" && textView.text.characters.count == 0) {
+            noteTextView.text = "Notes, tell us the story behind it."
+            textView.textColor = UIColor.lightGray
+        }
+        animateViewMoving(up: true, moveValue: 100)
         textView.becomeFirstResponder()
     }
     func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
-        //        textView.text = ""
         textView.resignFirstResponder()
         return true
     }
-
-    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        animateViewMoving(up: true, moveValue: 100)
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        animateViewMoving(up: false, moveValue: 100)
+    }
+    func animateViewMoving (up:Bool, moveValue :CGFloat){
+        let movementDuration:TimeInterval = 0.3
+        let movement:CGFloat = ( up ? -moveValue : moveValue)
+        UIView.beginAnimations( "animateView", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(movementDuration )
+        self.view.frame = self.view.frame.offsetBy(dx: 0,  dy: movement)
+        UIView.commitAnimations()
+    }
 }
 
